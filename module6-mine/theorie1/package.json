@@ -1,0 +1,11 @@
+{
+  "name": "theorie1",
+  "private": true,
+  "version": "0.0.0",
+  "main": "index.js",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "mongoose": "^8.0.3"
+  }
+}

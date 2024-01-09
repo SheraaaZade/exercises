@@ -1,0 +1,16 @@
+@hostname = localhost
+@port = 3001
+@host = http://{{hostname}}:{{port}}
+
+###
+
+POST {{host}}/phonebook/ HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "MMMMM HATE U",
+  "number": "01898465"
+}
+
+

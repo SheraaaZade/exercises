@@ -1,0 +1,15 @@
+@hostname = localhost
+@port = 3001
+@personId = 5fb7b530f27f7067d8b7eeb2
+@missingPersonId = 5fb7b530f27f7067d8b7eeb1
+@host = http://{{hostname}}:{{port}}
+
+###
+
+DELETE {{host}}/api/persons/{{personId}} HTTP/1.1
+Accept: application/json
+
+###
+
+DELETE {{host}}/api/persons/{{missingPersonId}} HTTP/1.1
+Accept: application/json

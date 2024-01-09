@@ -1,0 +1,31 @@
+const mongoose = require('mongoose')
+
+if (process.argv.length<3) {
+  console.log('give password as argument')
+  process.exit(1)
+}
+
+const password = process.argv[2]
+
+const url =
+  `mongodb+srv://chehrazadouazzani:${password}@helloworld.atoynja.mongodb.net/noteAppAgain?retryWrites=true&w=majority`
+
+mongoose.set('strictQuery',false)
+mongoose.connect(url)
+
+const noteSchema = new mongoose.Schema({
+  content: String,
+  important: Boolean,
+})
+
+const Note = mongoose.model('Note', noteSchema)
+
+const note = new Note({
+  content: 'AHHHHHH WEB3 DE MERDEEEEE',
+  important: true,
+})
+
+note.save().then(result => {
+  console.log(note)
+  mongoose.connection.close()
+})

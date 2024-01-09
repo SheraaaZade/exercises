@@ -1,0 +1,15 @@
+@hostname = localhost
+@port = 3001
+@noteId = 658c317340db313c8941fb6f
+@missingNoteId = 5
+@host = http://{{hostname}}:{{port}}
+
+###
+
+GET {{host}}/api/notes/{{noteId}} HTTP/1.1
+Accept: application/json
+
+###
+
+GET {{host}}/api/notes/{{missingNoteId}} HTTP/1.1
+Accept: application/json

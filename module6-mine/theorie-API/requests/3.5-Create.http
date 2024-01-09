@@ -1,0 +1,16 @@
+@hostname = localhost
+@port = 3001
+@host = http://{{hostname}}:{{port}}
+
+###
+
+POST {{host}}/api/notes HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "content": "MMMMM LOVE U",
+  "important": "true"
+}
+
+

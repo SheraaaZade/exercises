@@ -1,0 +1,9 @@
+@hostname = localhost
+@port = 3001
+@host = http://{{hostname}}:{{port}}
+
+@idPhone=659b02f143ddf21f935e6350
+###
+
+GET {{host}}/phonebook/{{idPhone}} HTTP/1.1
+Accept: application/json

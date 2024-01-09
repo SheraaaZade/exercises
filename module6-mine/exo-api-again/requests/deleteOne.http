@@ -1,0 +1,10 @@
+@hostname = localhost
+@port = 3001
+@host = http://{{hostname}}:{{port}}
+
+@idPhone=658d8e0fa7930f1b7e755c43
+
+###
+
+DELETE {{host}}/phonebook/{{idPhone}} HTTP/1.1
+Accept: application/json
